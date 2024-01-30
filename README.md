@@ -1,3 +1,10 @@
+## Progress Projek Belajar Laravel 10
+![image](https://github.com/abdulr123/belajarlaravel10_crud/assets/48147326/1f0f8988-ac1d-4dc5-8921-6ed2de303349)
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
