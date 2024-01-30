@@ -1,4 +1,4 @@
-## Progress Projek Belajar Laravel
+## Progress Projek Belajar Laravel 10
 ![image](https://github.com/abdulr123/belajarlaravel10_crud/assets/48147326/1f0f8988-ac1d-4dc5-8921-6ed2de303349)
 
 
