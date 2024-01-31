@@ -22,7 +22,6 @@ class StoreStudentsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
         ];
     }
 }
