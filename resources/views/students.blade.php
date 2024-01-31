@@ -8,8 +8,12 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-3">
-                <div class="p-2 text-gray-900">
-                    <h4>Students Data</h4>
+                <h4>Students Data</h4>
+                
+                <div class="mt-2 mb-2">
+                    <button type="button " class="btn btn-sm btn-primary" onclick="window.location='{{ url('students/create') }}'" >
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i> Add New Data
+                    </button>
                 </div>
                 <div class="card">
                     <div class="card-body">
