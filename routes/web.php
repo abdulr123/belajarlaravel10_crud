@@ -35,7 +35,11 @@ Route::middleware('auth')->group(function () {
     // menampilkan data
     Route::get('/students', [StudentsController::class, 'index'])->name('students');
     Route::get('/students/create', [StudentsController::class,  'create'])->name('students/create');
+    // menjalankan perintah save yang ada pada method store di Student Controller
     Route::get('/store', [StudentsController::class, 'store'])->name('store');
+    // menambhakan form edit
+    Route::get('/students/edit/{idstudents}', [StudentsController::class, 'edit'])->name('students/edit');
+    Route::get('/update/{idstudents}', [StudentsController::class, 'update'])->name('update');
 });
 
 require __DIR__.'/auth.php';

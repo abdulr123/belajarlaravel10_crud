@@ -44,9 +44,21 @@
                                         <td>{{ $row->address }}</td>
                                         <td>{{ $row->emailaddress }}</td>
                                         <td>{{ $row->phone }}</td>
-                                        <td>                                           
-                                            <i class="fa fa-pencil-square-o"  aria-hidden="true" > | 
-                                            <i class="fa fa-trash" aria-hidden="true"></i>                                              
+                                        <td>
+                                            <button onclick="window.location='{{ url('students/edit/' . $row->idstudents) }}'" type="button"
+                                                class="btn btn-sm btn-info" title="Edit Data">
+                                                <i class="fa fa-pencil-square-o"></i>
+                                            </button>
+                                            <form onsubmit="return deleteData('{{ $row->fullname }}')" style="display: inline"
+                                                method="POST" action="{{ url('students/' . $row->idstudents) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" title="Hapus Data" class="btn btn-sm btn-info">
+                                                    <i class="fa fa-trash"></i> 
+                                                </button>
+                                            </form>
+                                             
+                                                                                         
                                         </td>
                                     </tr>
                                 @endforeach

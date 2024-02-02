@@ -53,15 +53,35 @@ class StudentsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Students $students)
+    public function edit(Students $students, $idstudents)
     {
+        $data = $students->find($idstudents);
+
+        return view('students/edit')->with([
+            'txtid' => $idstudents,
+            'txtfullname' => $data->fullname,
+            'txtaddress' => $data->address,
+            'txtemail' => $data->emailaddress,
+            'txtphone' => $data->phone,
+            'txtgender' => $data->gender,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateStudentsRequest $request, Students $students)
+    public function update(UpdateStudentsRequest $request, Students $students, $idstudents)
     {
+        $data = $students->find($idstudents);
+
+        $data->fullname = $request->txtfullname;
+        $data->gender = $request->txtgender;
+        $data->emailaddress = $request->txtemail;
+        $data->phone = $request->txtphone;
+        $data->address = $request->txtaddress;
+        $data->save();
+
+        return redirect('students')->with('msg', 'Student data has been successfully changed');
     }
 
     /**
